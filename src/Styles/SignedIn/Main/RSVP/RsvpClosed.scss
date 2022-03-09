@@ -1,0 +1,25 @@
+@import '../../../Commons/Button.scss';
+
+.formClosed {
+        grid-area: form;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas: '. note .' '. response .' '. rsvpChange .';
+        .note {
+            grid-area: note;
+            text-align:center;
+            height: $secondaryfontSize + 1vh;
+            font-family: $primaryfontFamily;
+            font-style: italic;
+            font-size: $secondaryfontSize;
+            @media only screen and (max-width: 600px){
+                font-family: $primaryfontFamily;
+                font-style: italic;
+                font-size: $secondaryfontSize;
+            }
+        }
+       .changeButton {
+           @include button(rsvpChange);
+        }    
+    }

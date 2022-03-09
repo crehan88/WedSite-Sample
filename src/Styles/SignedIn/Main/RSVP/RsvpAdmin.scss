@@ -1,0 +1,97 @@
+@import '../../../Commons/Button.scss';
+@import '../../../Commons/FormInput.scss';
+
+.rsvpadmin {
+  grid-area: form;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-areas: '. search .' '. form .' '. addinvite .' '. copyemails .';
+  .search {
+    grid-area: search;
+    height: 100%;
+    width: 100%;
+    font-family: $primaryfontFamily;
+    font-style: italic;
+    font-size: $secondaryfontSize;
+  }
+  form {
+    grid-area: form;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: '. warning .' '. name .' '. submit .' '. back .';
+    p {
+      grid-area: warning;
+      font-family: $primaryfontFamily;
+      font-style: italic;
+      font-size: $teritaryfontSize;
+      text-align: center;
+      color: red;
+      @media only screen and (max-width: 600px) {
+        font-family: $primaryfontFamily;
+        font-style: italic;
+        font-size: $teritaryfontSize;
+      }
+    }
+    .name {
+      @include forminput(name, 0);
+    }
+    .submitButton {
+      @include button(submit);
+    }
+    .backButton {
+      @include button(back);
+    }
+  }
+  .addInviteButton {
+    @include button(addinvite);
+  }
+  .copyEmails {
+    @include button(copyemails);
+  }
+  .rsvpList {
+    grid-area: form;
+    list-style-type: none;
+    padding: 0;
+    margin: 10%;
+    .listItemYes {
+      @include button(selectbutton);
+      text-align: left;
+      background-color: green;
+    }
+    .listItemNo {
+      @include button(selectbutton);
+      text-align: left;
+      background-color: red;
+    }
+    .listItemMaybe {
+      @include button(selectbutton);
+      text-align: left;
+    }
+    .listItemVisited {
+      @include button(selectbutton);
+      text-align: left;
+      background-color: yellow;
+    }
+  }
+  .individual {
+    grid-area: form;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-areas: '. display .' '. editinvite .' '. removeinvite .' '. backbutton .';
+    .infoDisplay {
+      grid-area: display;
+    }
+    .backButton {
+      @include button(backbutton);
+    }
+    .removeInvite {
+      @include button(removeinvite);
+    }
+    .editInvite {
+      @include button(editinvite);
+    }
+  }
+}

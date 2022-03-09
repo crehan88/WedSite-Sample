@@ -1,0 +1,36 @@
+.travel {
+    grid-area: page; 
+    border: 0;
+    margin: 5%;
+    padding: 1% 0 2% 0%;
+    grid-area: page; 
+    display:grid;
+    grid-template-rows:1fr auto;
+    grid-template-columns:auto auto auto;
+    grid-template-areas: '. travelhead .' '. travelbottom .';
+    background-color: #f0fff0;
+    opacity: 0.8;
+    border-radius: 8px;
+    text-align:center;
+    place-self: center;
+    h3 {
+        grid-area: travelhead;
+        font-size: $fontSize;
+        font-family: $fontFamily;
+        text-align:center;
+        place-self: center;
+    }
+    .travelbottom {
+        display:grid;
+        grid-area: travelbottom;
+        font-style: $fontStyle;
+        font-family: Times;
+        place-self:center;
+        .travelWelcome {
+            font-size: $fontSize - 1;
+        }
+        div {
+            margin: 0 5vh 0 5vh;
+        }
+    }
+}

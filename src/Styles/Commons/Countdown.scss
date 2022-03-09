@@ -1,0 +1,10 @@
+.countdown {
+    grid-area: countdown;
+    font-family: $primaryfontFamily;
+    font-style: italic;
+    font-size: $secondaryfontSize;
+    color:rgba(0, 0, 0, 0.2);
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}

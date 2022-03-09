@@ -1,0 +1,12 @@
+@mixin headermessage($display, $gridarea) {
+    grid-area: $gridarea;
+    font-family: $secondaryfontFamily;
+    font-size: $primaryfontSize;
+    font-style: italic;
+    align-self: center;
+    justify-self: center;
+    p {
+        display: $display;
+        margin: 0 2% 0 2%;
+    }
+}

@@ -1,0 +1,12 @@
+@mixin forminput($gridarea,$height) {
+    grid-area: $gridarea;
+    opacity: 0.5;
+    border-radius: 8px;
+    text-align:center;
+    height: $secondaryfontSize + $height;
+    font-family: $primaryfontFamily;
+    font-style: italic;
+    font-size: $secondaryfontSize;
+    margin: 2% 0 0 0;
+}
+

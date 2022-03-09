@@ -1,0 +1,22 @@
+.options {
+    grid-area: options;
+    font-family: $primaryfontFamily;
+    font-style: italic;
+    font-size: $secondaryfontSize;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    p {
+        margin: 0 0 1% 0;
+        align-self: end;
+        justify-self: center;
+        &:hover {
+            cursor: grab;
+            text-decoration: underline;
+        }
+    }
+    .selected {
+        text-decoration: underline;
+        color: gray;
+    }    
+}

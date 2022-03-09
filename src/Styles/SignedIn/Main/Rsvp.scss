@@ -1,0 +1,24 @@
+.rsvp {
+    grid-area: page; 
+    border: 0;
+    place-self: center;
+    margin: 5%;
+    text-align:center;
+    border-radius: 8px;
+    background-color: #f0fff0;
+    opacity: 0.8;
+    display: grid;
+    grid-template-rows: 0.25fr auto 1fr;
+    grid-template-columns:1fr 3fr 1fr;
+    grid-template-areas: '. header .' '. form .' '. . .';
+    h2 {
+        grid-area: header;
+        font-family: $primaryfontFamily;
+        font-size: $secondaryfontSize;
+        font-style: bold;
+        text-align: center;
+    }
+    @import './RSVP/RsvpAdmin.scss';
+    @import './RSVP/RsvpClosed.scss';
+    @import './RSVP/RsvpForm.scss';
+}

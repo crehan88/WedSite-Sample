@@ -1,0 +1,32 @@
+@import '../Commons/Button.scss';
+@import '../Commons/FormInput.scss';
+
+form {
+  grid-area: form;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-areas: '. warning .' '. name .' '. password .' '. submit .';
+  p {
+    grid-area: warning;
+    font-family: $primaryfontFamily;
+    font-style: italic;
+    font-size: $teritaryfontSize;
+    text-align: center;
+    color: red;
+    @media only screen and (max-width: 600px) {
+      font-family: $primaryfontFamily;
+      font-style: italic;
+      font-size: $teritaryfontSize;
+    }
+  }
+  .name {
+    @include forminput(name, 0);
+  }
+  .password {
+    @include forminput(password, 0);
+  }
+  .submitButton {
+    @include button(submit);
+  }
+}

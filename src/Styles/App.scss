@@ -1,0 +1,15 @@
+@import './Constants.scss';
+
+body {
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  @media only screen and (max-width: 600px) {
+    background-position: 50% 50%;
+    background-image: url();
+  }
+  @import './SignedOut/SignedOutPage.scss';
+  @import './SignedIn/SignedInPage.scss';
+}

@@ -1,0 +1,15 @@
+.signedIn {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 30% auto 20%;
+    grid-template-columns: auto;
+    grid-template-areas: 'header' 'main' 'footer';
+    @media only screen and (max-width: 600px){
+        grid-template-rows: 10% auto 20%;
+    }
+    @import './Header.scss';
+    @import './Main.scss';
+    @import './Footer.scss';
+}
+
+

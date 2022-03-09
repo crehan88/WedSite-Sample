@@ -1,0 +1,17 @@
+$fontSize: 4vh;
+$fontStyle: italic;
+$fontFamily: 'Sacramento', cursive;
+
+.main {
+  height: 100%;
+  width: 100%;
+  grid-area: main;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas: '. page .';
+  @import './Main/Wedding.scss';
+  @import './Main/Travel.scss';
+  @import './Main/Rsvp.scss';
+  @import './Main//Map.scss';
+}

@@ -1,0 +1,44 @@
+.wedding {
+    grid-area: page; 
+    margin: 5%;
+    border: 0;
+    display:grid;
+    padding: 5vh;
+    width: 80vw;
+    grid-template-rows:auto auto;
+    grid-template-columns:auto auto auto;
+    grid-template-areas:'. wedhead .' '. wedbottom .';
+    background-color: #f0fff0;
+    opacity: 0.8;
+    border-radius: 8px;
+    place-self: center;
+    h3 {
+        grid-area: wedhead;
+        font-size: $fontSize;
+        font-family: $fontFamily;
+        text-align:center;
+    }
+    .wedbottom {
+        grid-area: wedbottom;
+        display:grid;
+        grid-template-columns: auto auto auto;
+        div {
+            display: grid;
+            text-align:center;
+            p {
+                font-family: Times;
+                font-style: $fontStyle;
+                font-size: $fontSize - 2.5;
+                margin: 3% 0 0 0;
+            }
+            h4 {
+                 font-family: $fontFamily;
+                font-size: $fontSize - 1.5;
+            }
+        }
+        @media only screen and (max-width: 600px){
+            grid-template-rows: auto auto auto;         
+            grid-template-columns: auto;
+        }
+    }
+}
